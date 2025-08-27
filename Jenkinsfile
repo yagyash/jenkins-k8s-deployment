@@ -25,8 +25,8 @@ pipeline {
                     sh """
                       echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" $DOCKER_REGISTRY --password-stdin
                       cd redis
-                      sudo docker build -t $REDIS_IMAGE:$REDIS_TAG .
-                      sudo docker push $REDIS_IMAGE:$REDIS_TAG
+                      docker build -t $REDIS_IMAGE:$REDIS_TAG .
+                      docker push $REDIS_IMAGE:$REDIS_TAG
                     """
                 }
             }
@@ -40,8 +40,8 @@ pipeline {
                     sh """
                       echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" $DOCKER_REGISTRY --password-stdin
                       cd web
-                      sudo docker build -t $WEB_IMAGE:$WEB_TAG .
-                      sudo docker push $WEB_IMAGE:$WEB_TAG
+                      docker build -t $WEB_IMAGE:$WEB_TAG .
+                      docker push $WEB_IMAGE:$WEB_TAG
                     """
                 }
             }
