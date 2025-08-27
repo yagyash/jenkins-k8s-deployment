@@ -13,7 +13,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://gitlab.com/yagyash/jenkins-k8s-deployment.git'
+                git branch: 'main', url: 'https://github.com/yagyash/jenkins-k8s-deployment.git'
             }
         }
 
