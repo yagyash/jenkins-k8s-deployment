@@ -3,10 +3,10 @@ pipeline {
 
     environment {
         DOCKER_REGISTRY = "https://registry-1.docker.io/v1/"
-        REDIS_IMAGE = "${DOCKER_REGISTRY}/redis"
-        WEB_IMAGE   = "${DOCKER_REGISTRY}/webapp"
-        REDIS_TAG   = "v1.0"
-        WEB_TAG     = "v1.0"
+        REDIS_IMAGE = "yagya123/redis"
+        WEB_IMAGE   = "yagya123/webapp"
+        REDIS_TAG   = "latest"
+        WEB_TAG     = "latest"
     }
 
     stages {
@@ -25,8 +25,8 @@ pipeline {
                     sh """
                       echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" $DOCKER_REGISTRY --password-stdin
                       cd redis
-                      docker build -t redis/ .
-                      docker push
+                      docker build -t $REDIS_IMAGE:$REDIS_TAG .
+                      docker push $REDIS_IMAGE:$REDIS_TAG
                     """
                 }
             }
