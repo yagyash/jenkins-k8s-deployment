@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_REGISTRY = "https://hub.docker.com/"
+        DOCKER_REGISTRY = "https://registry-1.docker.io/v1/"
         REDIS_IMAGE = "${DOCKER_REGISTRY}/redis"
         WEB_IMAGE   = "${DOCKER_REGISTRY}/webapp"
         REDIS_TAG   = "v1.0"
