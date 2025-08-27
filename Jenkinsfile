@@ -25,8 +25,8 @@ pipeline {
                     sh """
                       echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" $DOCKER_REGISTRY --password-stdin
                       cd redis
-                      docker build -t $REDIS_IMAGE
-                      docker push $REDIS_IMAGE
+                      docker build -t redis/ .
+                      docker push
                     """
                 }
             }
@@ -40,8 +40,8 @@ pipeline {
                     sh """
                       echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" $DOCKER_REGISTRY --password-stdin
                       cd web
-                      docker build -t $WEB_IMAGE:$WEB_TAG .
-                      docker push $WEB_IMAGE:$WEB_TAG
+                      docker build -t web/ .
+                      docker push
                     """
                 }
             }
