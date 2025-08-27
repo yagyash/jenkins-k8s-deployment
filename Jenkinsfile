@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_REGISTRY = "registry.gitlab.com/your-namespace"
+        DOCKER_REGISTRY = "https://hub.docker.com/repository/docker/yagya123"
         REDIS_IMAGE = "${DOCKER_REGISTRY}/redis"
         WEB_IMAGE   = "${DOCKER_REGISTRY}/webapp"
         REDIS_TAG   = "v1.0"
