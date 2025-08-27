@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: webapp
-          image: registry.gitlab.com/your-namespace/webapp:v1.0
+          image: yagya123/webapp:y_web
           ports:
             - containerPort: 3000
 ---
