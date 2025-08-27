@@ -25,8 +25,8 @@ pipeline {
                     sh """
                       echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" $DOCKER_REGISTRY --password-stdin
                       cd redis
-                      docker build -t $REDIS_IMAGE:$REDIS_TAG .
-                      docker push $REDIS_IMAGE:$REDIS_TAG
+                      docker build -t $REDIS_IMAGE
+                      docker push $REDIS_IMAGE
                     """
                 }
             }
