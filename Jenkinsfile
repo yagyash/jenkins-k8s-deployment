@@ -13,7 +13,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://gitlab.com/your-namespace/jenkins-redis-webapp.git'
+                git branch: 'main', url: 'https://gitlab.com/yagyash/jenkins-k8s-deployment.git'
             }
         }
 
