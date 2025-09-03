@@ -2,6 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
   name: webserver
+  namespace: testing
 spec:
   replicas: 3
   strategy:

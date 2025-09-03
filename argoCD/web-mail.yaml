@@ -4,7 +4,7 @@ metadata:
   labels:
     app: webserver
   name: webserver-mail
-  namespace: default
+  namespace: testing
 spec:
   ports:
     - port: 80
