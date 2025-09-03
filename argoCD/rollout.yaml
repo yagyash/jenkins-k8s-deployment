@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
+metadata:
+  name: webserver
+spec:
+  replicas: 3
+  strategy:
+    blueGreen:
+      activeService: webserver
+      previewService: webserver-mail
+      autoPromotionEnabled: false   # requires manual promotion
+  selector:
+    matchLabels:
+      app: webserver
+  template:
+    metadata:
+      labels:
+        app: webserver
+    spec:
+      containers:
+      - name: server
+        image: yagya123/mailserver   # Green version
+

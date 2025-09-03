@@ -17,4 +17,4 @@ spec:
     spec:
       containers:
       - image: yagya123/searchserver
-        name: searchserver
+        name: server
