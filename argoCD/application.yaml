@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/yagyash/ansible-k8s-cluster.git
+    repoURL: https://github.com/yagyash/jenkins-k8s-deployment.git
     targetRevision: HEAD
     path: argoCD
   destination:
