@@ -8,7 +8,7 @@ spec:
     blueGreen:
       activeService: webserver
       previewService: webserver-mail
-      autoPromotionEnabled: false   # requires manual promotion
+      autoPromotionEnabled: true   # requires manual promotion
   selector:
     matchLabels:
       app: webserver
